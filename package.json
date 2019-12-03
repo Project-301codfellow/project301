@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Project-301codfellow/project301-backend#readme",
   "dependencies": {
+    "@google-cloud/translate": "^5.1.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",

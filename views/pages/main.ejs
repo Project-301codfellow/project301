@@ -2,17 +2,29 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>LTUC Word App</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 
 <body>
-    <form action="/info" method="POST">
-        <label value="<%= randword%>">
-            <%= randword %>
-        </label>
-        <button> sound </button>
-        <input type="text" name="hello">
-        <button type="submit">TEST</button>
+    <section id="top" class="one dark cover">
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/raininglettersBW.mp495670.webm"
+                type="video/mp4">
+        </video> -->
+    </section>
+    <h1 class="animate">Type your word to learn </h1>
+
+    <form action="/info" method="POST" id="mainForm">
+        <div>
+            <label id="f1">
+                <input type="hidden" name="randword" value="<%= randword %>"> <%= randword %>
+                <audio src="<%= randword%>" controls></audio>
+            </label>
+            <input type="submit" id="f2">
+            <input type="text" id="f1">
+            <input type="submit" id="f2">
+        </div>
     </form>
 </body>
 

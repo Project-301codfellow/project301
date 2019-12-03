@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="app.js"></script>
     <title>Document</title>
 </head>
 
@@ -8,25 +10,32 @@
     <section>
         <% card.forEach(word => { %>
         <h1>
-            <%= card.term%>
+            <%= word.term%>
         </h1>
         <p>
-            <%= card.description%>
+            <%= word.description%>
         </p>
-        <img src="<%- card.image_url%>" alt="not working" width="250px">
+        <img src="<%- word.image_url%>" alt="not working" width="250px">
         <p>
-            <%= card.notes%>
+            <%= word.notes%>
         </p>
 
-        <form action="/">
-            <button>update</button>
-            <button>delete</button>
-        </form>
+        <button id="update_btn">update</button>
+        <section id="update_form">
+            <h2>Udate Info</h2>
+
+            <form action="<%= `/update/${card.id}` %>" method="POST">
+                <input type="text" name="term" value="<%= word.term%>">
+                <textarea name="description" id="" cols="30" rows="10"><%= word.description%></textarea>
+                <input type="text" name="image" value="<%= word.image_url%>">
+                <input type="text" name="notes" value="<%= word.notes%>">
+            </form>
+        </section>
 
         <% }) %>
 
         <form action="/main" method="post">
-        <button>NEW</button>
+            <button>NEW</button>
         </form>
     </section>
 </body>

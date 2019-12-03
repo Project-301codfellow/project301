@@ -17,6 +17,7 @@
     <p>
         <%= card.notes%>
     </p>
+    <audio src="<%= card%>" controls></audio>
     <div>
         <form action="/addNewCard" method="POST">
             <input type="hidden" name="term" value="<%= card.term%>">

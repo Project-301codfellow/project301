@@ -2,17 +2,32 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>LTUC Word App</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+    </style>
 </head>
 
 <body>
-    <form action="/main" method="post">
-        <input type="text" placeholder="user name">
-        <select name="lang">
+    <section id="top" class="one dark cover">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/raininglettersBW.mp495670.webm"
+                type="video/mp4">
+        </video>
+    </section>
+    <h2 class="animate">LTUC Word App</h2>
+
+    <form action="/main" method="post" id="mainForm" id="mainForm">
+        <input type="text" placeholder="user name" id="f1">
+        <!-- <select name="lang">
             <option value="eng-gb">english-british</option>
             <option value="hi">hindi</option>
-        </select>
-        <button>Submit</button>
+        </select> -->
+        <input type="submit" placeholder="Submit" id="f2">
     </form>
 </body>
 
