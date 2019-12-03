@@ -6,20 +6,27 @@
 
 <body>
     <section>
+        <% card.forEach(word => { %>
         <h1>
             <%= card.term%>
         </h1>
         <p>
             <%= card.description%>
         </p>
-        <img src="<%= card.image_url%>" alt="not working" width="250px">
+        <img src="<%- card.image_url%>" alt="not working" width="250px">
         <p>
             <%= card.notes%>
         </p>
 
-        <form action="">
+        <form action="/">
             <button>update</button>
             <button>delete</button>
+        </form>
+
+        <% }) %>
+
+        <form action="/main" method="post">
+        <button>NEW</button>
         </form>
     </section>
 </body>

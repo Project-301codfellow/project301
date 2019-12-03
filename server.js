@@ -19,10 +19,14 @@ app.set('view engine', 'ejs');
 
 app.get('/', proofOfLife);
 app.get('/dictionary', getFromDictionary)
+app.post('/info', getInfo)
 app.get('/newTerm', NewWordForm)
 app.post('/addNewCard', renderForm)
 app.post('/dictionary', addNewWord)
 app.get('/test', data)
+// app.get('/test2', collection)
+app.get('/main', renderHome)
+app.post('/main', getRandomWord)
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
@@ -32,20 +36,54 @@ function data(req, res) {
     console.log('testing');
     const app_id = "d6324635"; // insert your APP Id
     const app_key = "285981e5b60037743d3e6301a5a386a3"; // insert your APP Key
-
-
-    let url = `https://od-api.oxforddictionaries.com/api/v2/entries/${lang}/${input}?fields=pronunciations&strictMatch=false`;
+    let url = `https://od-api.oxforddictionaries.com/api/v2/entries/en-gb/ball?fields=pronunciations&strictMatch=false`;
     superagent.get(url)
         .set('app_id', app_id)
         .set('app_key', app_key)
         .set('Accept', 'application/json')
         .then(data => {
-            res.json(data.body);
+            res.json(data.body)
         })
         .catch(console.error);
 }
 
+// function collection(req, res) {
+//     let url = `https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf`;
+//     superagent.get(url)
+//         .set('x-rapidapi-key', "861a23e564msh9e59c3b41ee0870p1bc725jsn80dfae1d8670")
+//         .set('x-rapidapi-host', "wordsapiv1.p.rapidapi.com")
+//         .then(data => {
+//             res.status(200).json(data.body)
+//         })
+//         .catch(console.error);
+// }
 
+function getInfo(req,res) {
+    const app_id = "d6324635"; // insert your APP Id
+    const app_key = "285981e5b60037743d3e6301a5a386a3"; // insert your APP Key
+
+    let term = req.body
+    console.log('req', term);
+    
+    let url = `https://od-api.oxforddictionaries.com/api/v2/entries/en-gb/${term}?fields=pronunciations&strictMatch=false`;
+    superagent.get(url)
+        .set('app_id', app_id)
+        .set('app_key', app_key)
+        .set('Accept', 'application/json')
+        .then(data => {
+            res.json(data.body)
+        })
+}
+
+function getRandomWord(req, res) {
+    let file = require('./data/words.json')
+    let index = Math.floor(Math.random() * file.word.length)
+    console.log('test', index)
+    res.render('pages/main', { randword: file.word[index] })
+}
+function renderHome(req, res) {
+    res.render('pages/introduction')
+}
 function proofOfLife(req, res) {
     res.status(200).send(`hello form our app`)
     // res.render('pages/info')
@@ -55,8 +93,8 @@ function getFromDictionary(req, res) {
     let SQL = 'SELECT * FROM words';
     client.query(SQL)
         .then(results => {
-            res.render('pages/dictionary', { card: results.rows[0] });
-            console.log('res', results.rows[0]);
+            res.render('pages/dictionary', { card: results.rows });
+            console.log('res', results.rows);
 
         })
 }
@@ -83,7 +121,7 @@ function addNewWord(req, res) {
     let values = ['dog', 'mammal animal', 'https://i.dailymail.co.uk/1s/2019/11/23/09/21370544-7717313-image-a-1_1574501083030.jpg', 'hello doggoy'];
     client.query(SQL, values)
         .then(results => {
-            res.status(200).json(results.rows);
+            res.json(results.rows);
         })
 }
 
