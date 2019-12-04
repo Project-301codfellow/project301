@@ -1,0 +1,132 @@
+body {
+    background-image: url("http://pptstudios.nl/wp-content/uploads/2019/07/awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs.jpg");
+    width: 100%;
+    height: 100%;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.animate {
+    color: rgb(155, 13, 79);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    font-size: 60px;
+    font-family: Helvetica, sans-serif, Arial;
+    animation: load 1.2s ease-in-out;
+    animation-direction: alternate;
+    text-shadow: 0 0 1px white;
+}
+
+#pageee {
+    background-color: rgb(136, 196, 206);
+    width: 300px;
+    height: 200px;
+    opacity: .9;
+    z-index: -2;
+    float: left;
+}
+
+ul {
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    padding-top: 30px;
+    font-family: 'Satisfy', cursive;
+}
+
+.round {
+    display: block;
+    /* z-index: 2; */
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Satisfy', cursive;
+    border-width: 7px;
+    border-color: rgb(4, 179, 192);
+    border-style: solid;
+}
+
+.round span.round {
+    display: block;
+    opacity: 0;
+    font-size: 1px;
+    border: 5px red;
+    color: rgb(240, 10, 10);
+}
+
+a.round:hover span {
+    opacity: 1;
+    font-size: 16px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+
+#f2 {
+    color: rgb(155, 13, 79);
+    background-color: rgb(234, 236, 103);
+    size: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@-moz-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@-o-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 0.08;
+        filter: blur(5px);
+        letter-spacing: 3px;
+    }
+    100% {}
+}
