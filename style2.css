@@ -127,14 +127,26 @@ input, select, textarea {
 }
 
 #f2 {
-    width: 85px;
-    height: 60px;
+    width: 45px;
+    height: 30px;
     text-align: center;
     margin-left: 50px;
-    color: rgb(77, 6, 6);
+   
     font-family: Georgia, 'Times New Roman', Times, serif;
+   
+        color: darkblue;
+        size: 10px;
+        background: darksalmon;
+    
 }
 
+
+#pageee{
+    border-block-color: rgb(116, 83, 53);
+    background-color:rgb(187, 158, 64) ;
+    width: 300px;
+    height: 300px;
+}
 
 video{
     position: absolute;
@@ -244,7 +256,7 @@ width: 65%;
             font-family: "helvetica neue", helvetica, arial, sans-serif;
             font-size: 13px;
             text-align: center;
-            background: rgb(182, 230, 230) url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png');
+        background-image: url("http://pptstudios.nl/wp-content/uploads/2019/07/awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs.jpg");
         }
     
         ul {
@@ -393,6 +405,5 @@ width: 65%;
 
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 
 

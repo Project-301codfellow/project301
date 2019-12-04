@@ -22,7 +22,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
+  line-height: 1;
+  background-color: rgb(141, 17, 114);
 }
 
 ol, ul {
@@ -62,135 +63,117 @@ input, select, textarea {
 }
 
 
-
-
-
-#f1{
-    width: 500px;
-    height: 70px;
-    text-align: center;
-    margin-left: 50px;
-    border: 2px rgb(65, 4, 4);
-    scroll-margin-top: 300px;
-    color: maroon;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* background: green; */
-}
-
-
-#f2 {
-    width: 200px;
-    height: 60px;
-    text-align: center;
-    margin-left: 800px;
-    color: rgb(77, 6, 6);
-    border-color: 5px maroon;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(141, 140, 140);
-}
-
-
 video{
+  position: absolute;
+   top: 0;
+  right: 0 ;
+  width: 100%;
+  opacity: .5;
+  background-repeat: repeat;
+
+  }
+
+  #infoo{
+    background-color: rgb(131, 10, 50);
+    width: 930px;
+margin-left: 230px; 
+margin-top: 150px;
+height: 900px;
+border-radius: 50px 30px;
+box-shadow: -1px -1px 10px 2px #fff;
+position: relative;
+z-index: 3;
+/* color: rgb(6, 119, 119); */
+
+}
+  
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+  .box button{
+    height: 90px;
+    width: 280px;
+    line-height: 90px;
+    background: transparent;
+    border: 3px solid #fff;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+    display: block;
+    position: relative;
+    overflow: hidden
+  }
+  
+
+  button:first-child{
+    color: #27f;
+    border-color: #27f
+  }
+  
+  button:first-child:before{
+    content: "";
+    display: block;
     position: absolute;
-     top: 0;
-    right: 0 ;
-    width: 100%;
-    opacity: 0.5;
-    height: 100%;
+    top: 50%;
+    left: 300px;
+    width: 30px;
+    height: 30px;
+    background: #27f;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  button:first-child:hover:before{
+    animation: hover-one 1s ease forwards
+  }
+  
+  @keyframes hover-one{
+    0%{
+      top: 50%;
+      left: 300px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      opacity: 0
     }
-/* 
-
-    #mainForm{
-        
-        width: 45%;
-        height: 200px;
-        border-radius: 10px;
-          background: rgb(141, 140, 140) ;
-          margin: 20px auto;
-        box-shadow: -1px -1px 10px 2px #fff;
-        position: relative;
-        z-index: 3;
-        margin-top: 300px;
-      } */
-
-
-      h1 {
-          text-align: center;
-          color: maroon;
-          font-size: 100px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-
-
-      h2 {
-        text-align: center;
-        color: maroon;
-        font-size: 40px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    25%{
+      top: 50%;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7
     }
+    50%{
+      top: 0;
+      left: 0;
+      width: 25%;
+      height: 100%;
+      border-radius: 0;
+      transform: translateY(0);
+      opacity: 1
+    }
+    100%{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      transform: translateY(0);
+    }
+  }
+  
+  
 
-      
-
-      #choice{
-        border: 10px solid rgb(70, 4, 4);
-        padding: 10px;
-        border-radius: 50px 20px;
-        background: rgb(172, 172, 172) ;
-
-
-
-        width: 900px;
-        height: 800px;
-       
-          margin: 20px auto;
-        box-shadow: -1px -1px 10px 2px #fff;
-        position: relative;
-        z-index: 3;
-        margin-top: 100px;
-      }
-      
-
-
-
-
-
-
-
-
-      p{
-     
-    text-align: center;
-    margin-left: 50px;
-    scroll-margin-top: 300px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    color: maroon;
-    font-size: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-
-
-
-
-img {
-    
-    width: 500px;
-    height: 200px;
-    text-align: center;
-    margin-left: 280px;
-    border: 2px rgb(65, 4, 4);
-    scroll-margin-top: 300px;
-    
-    
-}
-
-
-      #img2{
-        width: 200px;
-        height: 100px;
-        text-align: center;
-        margin-left: 290px;
-        scroll-margin-top: 300px;
-      }
