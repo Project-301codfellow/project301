@@ -20,17 +20,18 @@
             <%= word.notes%>
         </p>
 
-        <button id="update_btn">update</button>
-        <section id="update_form">
-            <h2>Udate Info</h2>
-
-            <form action="<%= `/update/${card.id}` %>" method="POST">
-                <input type="text" name="term" value="<%= word.term%>">
-                <textarea name="description" id="" cols="30" rows="10"><%= word.description%></textarea>
-                <input type="text" name="image" value="<%= word.image_url%>">
-                <input type="text" name="notes" value="<%= word.notes%>">
-            </form>
-        </section>
+        <form action="<%= `/updateCard/${word.id}` %>" method="post">
+            <input type="hidden" name="card_id" value="<%= word.id%>">
+            <input type="hidden" name="term" value="<%= word.term%>">
+            <input type="hidden" name="description" value="<%= word.description%>">
+            <input type="hidden" name="image_url" value="<%= word.image_url%>">
+            <input type="hidden" name="notes" value="<%= word.notes%>">
+            <button id="update_btn">Edit</button>
+        </form>
+        <form action="<%= `/delete/${word.id}`%>" method="post">
+            <input type="hidden" value="delete" name="_method">
+            <button>DELETE</button>
+        </form>
 
         <% }) %>
 

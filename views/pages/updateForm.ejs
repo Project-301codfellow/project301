@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h3>
+            Update Form
+        </h3>
+        <form action="<%= `/update/${card.card_id}` %>" method="POST">
+            <input type="hidden" name="_method" value="put">
+            <input type="hidden" name="card_id" value="<%= card.card_id%>">
+            <input type="text" name="term" value="<%= card.term%>">
+            <textarea name="description" id="" cols="30" rows="10"><%= card.description%></textarea>
+            <input type="text" name="image_url" value="<%- card.image_url%>">
+            <input type="text" name="notes" value="<%= card.notes%>">
+            <button>update</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
