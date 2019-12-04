@@ -3,22 +3,32 @@
 
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="/info.css">
 </head>
 
 <body>
+    <section id="top" class="one dark cover">
+        <video autoplay muted loop id="myVideo">
+            <source
+                src="https://ak4.picdn.net/shutterstock/videos/31206454/preview/stock-footage-abstract-hexagon-geometric-surface-loop-a-light-bright-clean-minimal-hexagonal-grid-pattern.webm"
+                type="video/mp4">
+        </video>
+    </section>
+    <section id="hexagon">
 
-    <h1>
-        <%= card.term%>
-    </h1>
-    <p>
-        <%- card.description%>
-    </p>
-    <img src="<%= card.image_url%>" alt="not working" width="250px">
-    <p>
-        <%= card.notes%>
-    </p>
-    <audio src="<%= card%>" controls></audio>
-    <div>
+        <h1 id="lll">
+            <%= card.term%>
+        </h1>
+        <p>
+            <%- card.description%>
+        </p>
+        <img src="<%= card.image_url%>" alt="not working" width="250px">
+        <p>
+            <%= card.notes%>
+        </p>
+        <audio src="<%= card%>" controls></audio>
+    </section>
+    <div class="box" id="smail">
         <form action="/addNewCard" method="POST">
             <input type="hidden" name="term" value="<%= card.term%>">
             <input type="hidden" name="description" value="<%- card.description%>">

@@ -3,29 +3,66 @@
 
 <head>
     <title>LTUC Word App</title>
-    <link rel="stylesheet" href="style3.css">
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>
-    <section id="top" class="one dark cover">
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/raininglettersBW.mp495670.webm"
-                type="video/mp4">
-        </video> -->
-    </section>
-    <h1 class="animate">Type your word to learn </h1>
-
-    <form action="/info" method="POST" id="mainForm">
-        <div>
-            <label id="f1">
-                <input type="hidden" name="randword" value="<%= randword %>"> <%= randword %>
-                <audio src="<%= randword%>" controls></audio>
-            </label>
-            <input type="submit" id="f2">
-            <input type="text" id="f1">
-            <input type="submit" id="f2">
+    <main>
+        <div class="wrapper">
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-    </form>
+        <form action="/info" method="POST" id="loginform">
+            <h1>Type your word to learn </h1>
+            <div class="input-info">
+                <input type="text" name="randword" value="<%= randword %>">
+                <input type="submit" id="f2">
+                <div class="log-sign">
+                    <input type="text" id="f1">
+                    <input type="submit" id="f2">
+                </div>
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>
+
+<!-- 
+
+<body>
+        <form id="loginform" action="#">
+            <h1> Word to learn</h1>
+            <div class="input-info">
+                <input type="text" placeholder="Word">
+            <div class="log-sign">
+                <button class="login" form="loginform"> submit</button>
+                    <button class="signup" form="signupform"> Sound</button>
+                </a>
+            </div>
+        <div>
+        </div>
+
+        <div class="input-info">
+                <input type="text" placeholder="User-Name">
+            <div class="log-sign">
+                <button class="login" form="loginform"></i> submit</button>
+                    <button class="signup" form="signupform"></i> Sound</button>
+                </a>
+            </div>
+</form>
+<script src="shaimaa3.js"> </script>
+</body>
+</html>
+ -->

@@ -3,32 +3,27 @@
 
 <head>
     <title>LTUC Word App</title>
-    <link rel="stylesheet" href="style1.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/introduction.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Amatic+SC|Dancing+Script|Lobster|Modak|Pacifico|Patrick+Hand|Indie+Flower|Righteous|Yellowtail|ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
     <style>
     </style>
 </head>
 
 <body>
-    <section id="top" class="one dark cover">
-        <video autoplay muted loop id="myVideo">
-            <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/raininglettersBW.mp495670.webm"
-                type="video/mp4">
+    <header>
+        <h1>LTUC Word App</h1>
+    </header>
+    <main>
+        <video autoplay muted loop id="vid">
+            <source src="/WhatsApp Video 2019-12-04 at 15.13.11.mp4" type="video/mp4">
         </video>
-    </section>
-    <h2 class="animate">LTUC Word App</h2>
-
-    <form action="/main" method="post" id="mainForm" id="mainForm">
-        <input type="text" placeholder="user name" id="f1">
-        <!-- <select name="lang">
-            <option value="eng-gb">english-british</option>
-            <option value="hi">hindi</option>
-        </select> -->
-        <input type="submit" placeholder="Submit" id="f2">
-    </form>
+        <form action="/main" method="post" id="info">
+            <input type="text" placeholder="user name" id="newUser">
+            <input type="submit" placeholder="Submit" id="button">
+        </form>
+    </main>
 </body>
 
 </html>
