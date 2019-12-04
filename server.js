@@ -1,6 +1,5 @@
 `use strict`;
 
-
 ///// packages \\\\\
 
 require('dotenv').config();
@@ -33,18 +32,19 @@ app.use(methodOverride((request, response) => {
     }
 }))
 
-///// Routs and Function call \\\\\
+///// All Routs \\\\\
+app.get('/john', john)
 app.get('/', proofOfLife);
+app.get('/main', renderHome)
 app.get('/dictionary', getFromDictionary)
-app.post('/info', getInfo)
 app.get('/newTerm', NewWordForm)
+app.get('/test', data)
+app.post('/main', getRandomWord)
+app.post('/info', john)
 app.post('/addNewCard', renderForm)
 app.post('/dictionary', addNewWord)
-app.get('/test', data)
-app.get('/main', renderHome)
-app.post('/main', getRandomWord)
-app.put('/update/:card_id', updateCard)
 app.post('/updateCard/:card_id', getOneCard)
+app.put('/update/:card_id', updateCard)
 app.delete('/delete/:card_id', deletCard)
 
 app.use('*', notFoundHandler);
@@ -100,7 +100,6 @@ function renderHome(req, res) {
 
 function proofOfLife(req, res) {
     res.status(200).send(`hello form our app`)
-    // res.render('pages/info')
 }
 
 function getFromDictionary(req, res) {
@@ -148,7 +147,7 @@ function updateCard(req, res) {
     let values = [term, description, image_url, notes, req.params.card_id]
     console.log('hello', req.params);
     console.log('values', values)
-;
+        ;
     client.query(SQL, values)
         .then(res.redirect(`/dictionary`))
 }
@@ -160,6 +159,37 @@ function deletCard(req, res) {
         .then(res.redirect(`/dictionary`))
 }
 
+///// Super Cool Function \\\\\
+async function john(req, res) {
+
+    const translate = new Translate();
+
+    let text = req.body.randword;
+    console.log('text', text);
+
+    let target = 'ar';
+
+    let imageURL = `https://app.zenserp.com/api/v2/search?q=${text}&hl=en&gl=US&location=United%20States&search_engine=google.com&tbm=isch&num=10&start=0&apikey=${process.env.IMAGE_API_KEY}`;
+
+    try {
+        let [translated] = await translate.translate(text, target);
+        let images = await superagent.get(imageURL);
+
+        let results = {
+            text: text,
+            translated: translated,
+            images: images.body.image_results[0]
+        };
+        res.render('pages/info', { card: results })
+        // res.status(200).json(results);
+
+    } catch (error) {
+        res.status(500).send(error);
+    }
+
+
+};
+//////////////////////////////          \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ///// Erorr Sections \\\\\
 function errorHandler(error, req, res) {

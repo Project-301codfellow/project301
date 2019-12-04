@@ -5,6 +5,9 @@
     <title>LTUC Word App</title>
     <script src="/app.js"></script>
     <link rel="stylesheet" href="/main.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Amatic+SC|Dancing+Script|Indie+Flower|Lobster|Modak|Pacifico|Patrick+Hand|Righteous|Yellowtail|ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -24,13 +27,16 @@
             </ul>
         </div>
         <form action="/info" method="POST" id="loginform">
-            <h1>Type your word to learn </h1>
+            <h1>Give It a Shot</h1>
             <div class="input-info">
-                <input type="text" name="randword" value="<%= randword %>">
-                <input type="submit" id="f2">
+                <input type="hidden" name="randword" value="<%= randword %>">
+                <div class="rand">
+                    <%= randword %>
+                </div>
                 <div class="log-sign">
-                    <input type="text" id="f1">
-                    <input type="submit" id="f2">
+                    <!-- <input type="submit" id="f2"> -->
+                    <input type="text" placeholder="what is the meaning" id="f1">
+                    <input type="submit" value="TEST" id="f2">
                 </div>
             </div>
         </form>
