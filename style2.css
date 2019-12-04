@@ -1,95 +1,18 @@
-
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
-
 body {
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-mark {
-	background-color: transparent;
-	color: inherit;
-}
-
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-}
-
-
-
-
-
-
-
-@keyframes load {
-    0%{
-        opacity: 0.08;
-/*         font-size: 10px; */
-/* 				font-weight: 400; */
-				filter: blur(5px);
-				letter-spacing: 3px;
-        }
-    100%{
-/*         opacity: 1; */
-/*         font-size: 12px; */
-/* 				font-weight:600; */
-/* 				filter: blur(0); */
-        }
+    background-image: url("http://pptstudios.nl/wp-content/uploads/2019/07/awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs.jpg");
+    width: 100%;
+    height: 100%;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
 }
 
 .animate {
-	display:flex;
+    color: rgb(155, 13, 79);
 	justify-content: center;
 	align-items: center;
 	height:100%;
 	margin: auto;
-/* 	width: 350px; */
 	font-size:60px;
 	font-family: Helvetica, sans-serif, Arial;
 	animation: load 1.2s infinite 0s ease-in-out;
@@ -99,311 +22,118 @@ input, select, textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#f1{
-    width: 356px;
-    height: 70px;
-    text-align: center;
-    margin-left: 50px;
-    border: 2px rgb(65, 4, 4);
-    scroll-margin-top: 300px;
-    color: maroon;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* background: green; */
-    margin-top: 16px;
-}
-
-#f2 {
-    width: 45px;
-    height: 30px;
-    text-align: center;
-    margin-left: 50px;
-   
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   
-        color: darkblue;
-        size: 10px;
-        background: darksalmon;
-    
-}
-
-
 #pageee{
-    border-block-color: rgb(116, 83, 53);
-    background-color:rgb(187, 158, 64) ;
+    background-color:rgb(164, 171, 172) ;
     width: 300px;
-    height: 300px;
+    height: 200px;
+    opacity: .9;
+    z-index: -2;
+    float: left;
+
 }
 
-video{
-    position: absolute;
 
-    width: 100%;
-    opacity: 0.5;
-    height: 200%;
-    }
 
+
+
+ul {
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px;      
+    display: inline-block;  }
     
-    h1 {
-          text-align: center;
-          color: maroon;
-          font-size: 100px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        
-        
-        img {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            margin-left: 596px;
-        border: 2px rgb(65, 4, 4);
-        scroll-margin-top: 300px;
-        margin-top: -69px; }
-        
-        
-        div {
-            display: inline-block;
+    li {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        width: 130px;
+        height: 10px;
+            padding-top: 30px;
+            font-family: 'Satisfy', cursive;
             
         }
         
         
         
         
-        
-        
-        
-        
-        
-        h3 {
-            display: inline-block;
-            border-radius: 15px 50px 30px;
-            background: rgb(109, 2, 2);
-            padding: 20px; 
-            width: 200px;
-            height: 150px; 
-            font-size: 50px;
-            color: black;
-        }
-        
-        
-
-        #word{
-width: 65%;
-                height: 400px;
-         margin: 20px auto;
-                box-shadow: -1px -1px 10px 2px #fff;
-                position: relative;
-                z-index: 3;
-                margin-top: 180px;}
-        
-        /* 
-
-
-    
-            #mainForm{
-                
-                
-                border-radius: 10px;
-                  background: rgb(141, 140, 140) ;
-                 
-              } */
-        
-        
-
-        
-        
-        
-        
-        h1{
-            padding: 40px 0;
-            text-align: center;
-      font-weight: bolder;
-    }
-    header nav{
-      float: right;
-    }
-  
-
-
-
-    * {
-        margin: 0;
-        padding: 0;
-          -moz-box-sizing: border-box;
-            -o-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-    
-        body {
+        .round {
+            display: block;
+            
+            /* z-index: 2; */
+            transition: 0.5s;
+            position: absolute;
+            top: 0;
             width: 100%;
             height: 100%;
-            font-family: "helvetica neue", helvetica, arial, sans-serif;
-            font-size: 13px;
+            padding-top: 20px;		
+            text-decoration: none;		
             text-align: center;
-        background-image: url("http://pptstudios.nl/wp-content/uploads/2019/07/awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs.jpg");
+            font-size: 25px;		
+            font-family: 'Satisfy', cursive;
+            border-width: 7px;
+            border-color: rgb(4, 179, 192);
+            border-style: solid;
         }
-    
-        ul {
-            margin: 30px auto;
-            text-align: center;
+        
+        
+        
+        
+        
+        
+        .round span.round {
+            display: block;
+            opacity: 0;
+            font-size: 1px;
+            border: 5px red;
+            color: rgb(240, 10, 10);
+            
         }
-    
-        li {
-            list-style: none;
-            position: relative;
-            display: inline-block;
-            width: 100px;
-            height: 100px;
+        
+        a.round:hover span {
+            opacity: 1;
+            font-size: 16px;
+            text-shadow: 0 1px 1px rgba(0,0,0,.5);	
         }
-    
+        
+        
+        
+        
+        
+        
+        
+        
+        /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+        
+        
+        
+        
         @-moz-keyframes rotate {
             0% {transform: rotate(0deg);}
             100% {transform: rotate(-360deg);}
         }
-    
+            
         @-webkit-keyframes rotate {
             0% {transform: rotate(0deg);}
             100% {transform: rotate(-360deg);}
         }
-    
+        
         @-o-keyframes rotate {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(-360deg);}
-        }
-    
-        @keyframes rotate {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(-360deg);}
-        }
-    
-        .round {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            padding-top: 30px;		
-            text-decoration: none;		
-            text-align: center;
-            font-size: 25px;		
-            text-shadow: 0 1px 0 rgba(255,255,255,.7);
-            letter-spacing: -.065em;
-            font-family: "Hammersmith One", sans-serif;		
-            -webkit-transition: all .25s ease-in-out;
-            -o-transition: all .25s ease-in-out;
-            -moz-transition: all .25s ease-in-out;
-            transition: all .25s ease-in-out;
-            box-shadow: 2px 2px 7px rgba(0,0,0,.2);
-            border-radius: 300px;
-            z-index: 1;
-            border-width: 4px;
-            border-style: solid;
-        }
-    
-        .round:hover {
-            width: 130%;
-            height: 130%;
-            left: -15%;
-            top: -15%;
-            font-size: 33px;
-            padding-top: 38px;
-            -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-            -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-            -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-            box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-            z-index: 2;
-            border-size: 10px;
-            -webkit-transform: rotate(-360deg);
-            -moz-transform: rotate(-360deg);
-            -o-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-        }
-    
-        a.red {
-            background-color: rgba(239,57,50,1);
-            color: rgba(133,32,28,1);
-            border-color: rgba(133,32,28,.2);
-        }
-    
-        a.red:hover {
-            color: rgba(239,57,50,1);
-        }
-    
-        a.green {
-            background-color: rgba(1,151,171,1);
-            color: rgba(0,63,71,1);
-            border-color: rgba(0,63,71,.2);
-        }
-    
-        a.green:hover {
-            color: rgba(1,151,171,1);
-        }
-    
-        a.yellow {
-            background-color: rgba(252,227,1,1);
-            color: rgba(153,38,0,1);
-            border-color: rgba(153,38,0,.2);
-        }
-    
-        a.yellow:hover {
-            color: rgba(252,227,1,1);
-        }
-    
-        .round span.round {
-            display: block;
-            opacity: 0;
-            -webkit-transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
-            font-size: 1px;
-            border: none;
-            padding: 40% 20% 0 20%;
-            color: #fff;
-        }
-    
-        .round span:hover {
-            opacity: .85;
-            font-size: 16px;
-            -webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
-            -moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
-            -o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
-            text-shadow: 0 1px 1px rgba(0,0,0,.5);	
-        }
-    
-        .green span {
-            background: rgba(0,63,71,.7);		
-        }
-    
-        .red span {
-            background: rgba(133,32,28,.7);		
-        }
-    
-        .yellow span {
-            background: rgba(161,145,0,.7);	
-    
-        }
-
-
-
-
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(-360deg);}
+            }
+            
+            @keyframes rotate {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(-360deg);}
+            }
+                                @keyframes load {
+                                    0%{
+                                        opacity: 0.08;
+                                
+                                                filter: blur(5px);
+                                                letter-spacing: 3px;
+                                        }
+                                    100%{
+                                
+                                        }}
+            

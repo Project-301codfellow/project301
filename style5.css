@@ -93,149 +93,19 @@ p {
 
 
 /* ///////////////////////////////////////////////////////////////////////////// */
-
-
-
-
-.circle-button {
-	width: 100px;
-	height: 80px;
-	outline: none;
-	padding: .25em;
-	display: block;
-	margin: .25em auto;
-	cursor: pointer;
-	font-size: 40px;
-	border: 2px solid #232526;
-	transition: all 0.4s cubic-bezier(0.4, 0.0, 0.6, 1);
-	color: #009688;
-  border-radius: 50%;
-  font-family: 'Satisfy', cursive;
+#ddddd{
+  margin-left: 909px;
+  color: rgb(13, 21, 99);
+  background-color: rgb(146, 156, 165);
+  border-radius: 50px 30px;
+box-shadow: -1px -1px 10px 2px rgb(141, 136, 136);
+width: 150px;
+height: 90px;
+margin-top: -50px;
+font-size: 30px;
+font-family: 'Satisfy', cursive;
 
 }
-
-
-
-@keyframes rotateBlink {
-  10% {
-    transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
-    -moz-transform: rotate(30deg);
-    -o-transform: rotate(30deg);
-    -ms-transform: rotate(30deg); }
-  20% {
-    transform: rotate(60deg);
-    -webkit-transform: rotate(60deg);
-    -moz-transform: rotate(60deg);
-    -o-transform: rotate(60deg);
-    -ms-transform: rotate(60deg); }
-  30% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  40% {
-    border-width: 12px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  50% {
-    border-width: 62px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  60% {
-    border-width: 12px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  70% {
-    border-width: 62px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  80% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  90% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); }
-  100% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg); } }
-
-
-
-
-
-
-
-
-#button28 {
-  border-top: none;
-  margin-left: 890px;
-  border-bottom: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-left: 2px solid #b64c23;
-  border-right: 2px solid #191a61;
-  background-image: linear-gradient(to left, #b64c23, #191a61), linear-gradient(to left, #b64c23, #191a61);
-  background-size: 100% 2px;
-  background-position: 0 100%, 0 0;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-  -ms-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-  -o-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1); }
-  #button28 span {
-    background: -webkit-linear-gradient(left, #191a61, #b64c23);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-    -ms-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-    -o-transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1); }
-  #button28:hover {
-    background: transparent;
-    -webkit-animation: rotateBlink 1.25s ease 1;
-    -moz-animation: rotateBlink 1.25s ease 1;
-    -ms-animation: rotateBlink 1.25s ease 1;
-    -o-animation: rotateBlink 1.25s ease 1;
-    animation: rotateBlink 1.25s ease 1;
-    animation-fill-mode: forwards; }
-    #button28:hover span {
-      font-size: 16px;
-      transform: rotateZ(-90deg);
-      -webkit-transform: rotateZ(-90deg);
-      -moz-transform: rotateZ(-90deg);
-      -o-transform: rotateZ(-90deg);
-      -ms-transform: rotateZ(-90deg); }
-
-
-
 
 
 
