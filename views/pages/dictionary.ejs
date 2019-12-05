@@ -5,90 +5,67 @@
     <script src="app.js"></script>
     <title>Document</title>
     <link
-        href="https://fonts.googleapis.com/css?family=Bad+Script|Fugaz+One|Julius+Sans+One|Montserrat|Nanum+Pen+Script|Open+Sans|Russo+One|Satisfy&display=swap"
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Amatic+SC|Dancing+Script|Indie+Flower|Lobster|Modak|Pacifico|Patrick+Hand|Righteous|Yellowtail|ZCOOL+XiaoWei&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/dictionary.css">
 </head>
 
 <body>
-    <h2 class="animate">Your Dictionary</h2>
-
-    <section>
-        <% card.forEach(word => { %>
-        <h1 class="round green">
-            <%= word.term%>
-        </h1>
-        <p id="pageee">
-            <%= word.description%>
-        </p>
-        <img src="<%- word.image_url%>" alt="not working" width="250px">
-        <p>
-            <%= word.notes%>
-        </p>
-
-        <form action="<%= `/updateCard/${word.id}` %>" method="post" id="mainForm">
-            <input type="hidden" name="card_id" value="<%= word.id%>">
-            <input type="hidden" name="term" value="<%= word.term%>">
-            <input type="hidden" name="description" value="<%= word.description%>">
-            <input type="hidden" name="image_url" value="<%= word.image_url%>">
-            <input type="hidden" name="notes" value="<%= word.notes%>">
-            <button id="update_btn" id="f2">Edit</button>
-        </form>
-        <form action="<%= `/delete/${word.id}`%>" method="post">
-            <input type="hidden" value="delete" name="_method">
-            <button id="f2">DELETE</button>
-        </form>
-
-        <% }) %>
-
-        <form action="/main" method="post">
-            <button>NEW</button>
-        </form>
-    </section>
+    <div class="foo">
+        <span class="letter" data-letter="Y">Y</span>
+        <span class="letter" data-letter="o">o</span>
+        <span class="letter" data-letter="u">u</span>
+        <span class="letter" data-letter="r">r</span>
+        <br>
+        <span class="letter" data-letter="D">D</span>
+        <span class="letter" data-letter="i">i</span>
+        <span class="letter" data-letter="c">c</span>
+        <span class="letter" data-letter="t">t</span>
+        <span class="letter" data-letter="i">i</span>
+        <span class="letter" data-letter="o">o</span>
+        <span class="letter" data-letter="n">n</span>
+        <span class="letter" data-letter="a">a</span>
+        <span class="letter" data-letter="r">r</span>
+        <span class="letter" data-letter="y">y</span>
+    </div>
+    <div class="container clearfix">
+        <div class="outer">
+            <div class="box">
+                <div id="sohad">
+                    <section id="mainForm">
+                        <% card.forEach(word => { %>
+                        <h1 class="round green" id="dddd">
+                            <%= word.term%>
+                        </h1>
+                        <p id="pageee">
+                            <%= word.description%>
+                        </p>
+                        <img src="<%- word.image_url%>" alt="not working" id="dsds" width="250px">
+                        <p id='sohadNote'>
+                            <%= word.notes%>
+                        </p>
+                        <form action="<%= `/updateCard/${word.id}` %>" method="post" id="mainForm">
+                            <input type="hidden" name="card_id" value="<%= word.id%>">
+                            <input type="hidden" name="term" value="<%= word.term%>">
+                            <input type="hidden" name="description" value="<%= word.description%>">
+                            <input type="hidden" name="image_url" value="<%= word.image_url%>">
+                            <input type="hidden" name="notes" value="<%= word.notes%>">
+                            <button id="update_btn">Edit</button>
+                        </form>
+                        <form action="<%= `/delete/${word.id}`%>" method="post">
+                            <input type="hidden" value="delete" name="_method">
+                            <button id="f2">DELETE</button>
+                        </form>
+                </div>
+                <% }) %>
+                <form action="/main" method="post">
+                    <button id="f3">NEW</button>
+                </form>
+                </section>
+            </div>
+            <!--END: outer-->
+        </div>
+        <!--END: container-->
 </body>
 
 </html>
-<!-- 
- 
- 
- <h2 class="animate">Your Dictionary</h2>
- <form action="action" id="mainForm">
-     <ul>
-         <li><a href="#" class="round green">Word 1<span class="round">
-                     <div id="pageee">
-                         <p> Discription </p>
-                         <input type="submit" placeholder="Delete" value="Delete" id="f2">
-                         <input type="submit" placeholder="Update" value="Updata" id="f2">
-                     </div>
-                 </span></a></li>
-     </ul>
- </form>
- <form action="w2" id="w2">
-     <ul>
-         <li>
-             <a href="#" class="round red">word2
-                 <span class="round">
-                     <div id="pageee">
-                         <p> Discription </p>
-                         <input type="submit" placeholder="Delete" value="Delete" id="f2">
-                         <input type="submit" placeholder="Update" value="Updata" id="f2">
-                     </div>
-                 </span>
-             </a>
-         </li>
-     </ul>
- </form>
- <form action="w3" id="w3">
-     <ul>
-         <li><a href="#" class="round yellow">word3<span class="round">
-                     <div id="pageee">
-                         <p> Discription </p>
-                         <input type="submit" placeholder="Delete" value="Delete" id="f2">
-                         <input type="submit" placeholder="Update" value="Updata" id="f2">
-                     </div>
-                 </span></a></li>
-     </ul>
- </form>
-</body>
-</html>
- -->

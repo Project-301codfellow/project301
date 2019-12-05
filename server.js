@@ -1,6 +1,6 @@
 `use strict`;
 
-///// packages \\\\\
+////////////////////////////// Packages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 require('dotenv').config();
 const express = require('express');
@@ -32,9 +32,10 @@ app.use(methodOverride((request, response) => {
     }
 }))
 
-///// All Routs \\\\\
+////////////////////////////// All Routs \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 app.get('/john', john)
 app.get('/', proofOfLife);
+app.get('/start', go)
 app.get('/main', renderHome)
 app.get('/dictionary', getFromDictionary)
 app.get('/newTerm', NewWordForm)
@@ -51,8 +52,10 @@ app.use('*', notFoundHandler);
 app.use(errorHandler);
 
 
-///// The main functions \\\\\
-
+////////////////////////////// The Main Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+function go(req, res) {
+    res.render('pages/intro')
+}
 function data(req, res) {
 
     const app_id = "d6324635"; // insert your APP Id
@@ -73,17 +76,18 @@ function getInfo(req, res) {
     const app_id = "d6324635"; // insert your APP Id
     const app_key = "285981e5b60037743d3e6301a5a386a3"; // insert your APP Key
 
-    let term = req.body.randword
-    console.log('req', term);
+    let term = req.body
+    // console.log('req', term);
 
     let url = `https://od-api.oxforddictionaries.com/api/v2/entries/en-gb/${term}?fields=pronunciations&strictMatch=false`;
-    superagent.get(url)
+    return superagent.get(url)
         .set('app_id', app_id)
         .set('app_key', app_key)
         .set('Accept', 'application/json')
         .then(data => {
             // res.json(data.body)
-            res.render('pages/info', { card: data.body.results[0].lexicalEntries[0].pronunciations[0].audioFile })
+            // res.render('pages/info', { card: data.body.results[0].lexicalEntries[0].pronunciations[0].audioFile })
+            return data.body.results[0].lexicalEntries[0].pronunciations[0].audioFile;
         })
 }
 
@@ -137,7 +141,6 @@ function addNewWord(req, res) {
 }
 function getOneCard(req, res) {
     res.render('pages/updateForm', { card: req.body })
-    // .catch(handleError);
 }
 
 function updateCard(req, res) {
@@ -159,13 +162,17 @@ function deletCard(req, res) {
         .then(res.redirect(`/dictionary`))
 }
 
-///// Super Cool Function \\\\\
+////////////////////////////// Super Cool Function \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 async function john(req, res) {
-
+    // let sound = await getInfo(req, res);
     const translate = new Translate();
 
     let text = req.body.randword;
+    let answer = req.body.yourAnswer;
     console.log('text', text);
+    console.log('answer', answer)
+    // console.log('sound', sound);
+
 
     let target = 'ar';
 
@@ -178,9 +185,15 @@ async function john(req, res) {
         let results = {
             text: text,
             translated: translated,
-            images: images.body.image_results[0]
+            images: images.body.image_results[0],
+            // sound: sound
         };
-        res.render('pages/info', { card: results })
+        if (answer === results.translated) {
+
+            res.render('pages/info', { card: results })
+        } else {
+            res.render('pages/oh')
+        }
         // res.status(200).json(results);
 
     } catch (error) {
@@ -189,9 +202,8 @@ async function john(req, res) {
 
 
 };
-//////////////////////////////          \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////// Erorr Sections \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-///// Erorr Sections \\\\\
 function errorHandler(error, req, res) {
     res.status(500).send('We R Sorry')
 }
@@ -200,8 +212,8 @@ function notFoundHandler(req, res) {
     res.status(404).send('WHERE ARE YOU GOING!!')
 }
 
+////////////////////////////// Listening to the app \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-///// Listening to the app \\\\\
 client.connect()
     .then(() => app.listen(PORT, () => {
         console.log(`Welcome aboard on port ${PORT}`);
