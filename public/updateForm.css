@@ -161,3 +161,12 @@ div.foo {
 .letter:hover:after {
     transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg, 22deg);
 }
+
+input {
+    width: 700px;
+    font-size: 30px;
+}
+
+textarea {
+    font-size: 30px;
+}
