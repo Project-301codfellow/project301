@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
+html, body {
+    background: #C5CBD1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(214, 150, 129);
+}
+
+h2 {
+    color: rgb(13, 62, 105);
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#f1 {
+    font-family: 'Satisfy', cursive;
+    color: #A53407;
+    width: 3000px;
+    height: 300px;
+    font-size: 27px;
+}
+
+p {
+    color: #A53407;
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.acc {
+    margin: 90px 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.acc li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.acc_ctrl {
+    background: rgb(177, 169, 169);
+    border: none;
+    border-bottom: solid 1px #F2F2F2;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding: 2em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.acc_ctrl:after {
+    background: #44596B;
+    content: '';
+    height: 2px;
+    margin-right: 37px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 14px;
+}
+
+.acc_ctrl.active h2, .acc_ctrl:focus h2 {
+    position: relative;
+}
+
+.acc_panel {
+    background: rgb(118, 130, 141);
+    display: none;
+    overflow: hidden;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+#ddddd {
+    margin-left: 909px;
+    color: rgb(13, 21, 99);
+    background-color: rgb(146, 156, 165);
+    border-radius: 50px 30px;
+    box-shadow: -1px -1px 10px 2px rgb(141, 136, 136);
+    width: 150px;
+    height: 90px;
+    margin-top: -50px;
+    font-size: 30px;
+    font-family: 'Satisfy', cursive;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+div.foo {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.letter {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 8em;
+    margin: 0.2em;
+    position: relative;
+    color: rgb(100, 119, 126);
+    transform-style: preserve-3d;
+    perspective: 400;
+    z-index: 1;
+}
+
+.letter:before, .letter:after {
+    position: absolute;
+    content: attr(data-letter);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+}
+
+.letter, .letter:before, .letter:after {
+    transition: all 0.3s ease-in-out;
+}
+
+.letter:before {
+    color: #fff;
+    text-shadow: -1px 0px 1px rgba(255, 255, 255, .8), 1px 0px 1px rgba(0, 0, 0, .8);
+    z-index: 3;
+    transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+
+.letter:after {
+    color: rgba(0, 0, 0, .11);
+    z-index: 2;
+    transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 1deg);
+}
+
+.letter:hover:before {
+    color: #FAFAFA;
+    transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+
+.letter:hover:after {
+    transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg, 22deg);
+}
+
+input {
+    width: 700px;
+    font-size: 30px;
+}
+
+textarea {
+    font-size: 30px;
+}

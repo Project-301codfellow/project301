@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Bad+Script|Fugaz+One|Julius+Sans+One|Montserrat|Nanum+Pen+Script|Open+Sans|Russo+One|Satisfy&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        type="text/javascript"></script>
+    <link rel="stylesheet" href="/updateForm.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="foo">
+            <span class="letter" data-letter="U">U</span>
+            <span class="letter" data-letter="p">p</span>
+            <span class="letter" data-letter="d">d</span>
+            <span class="letter" data-letter="a">a</span>
+            <span class="letter" data-letter="t">t</span>
+            <span class="letter" data-letter="e">e</span>
+        </div>
+        <div class="container">
+            <form action="<%= `/update/${card.card_id}` %>" method="POST">
+                <ul class="acc">
+                    <input type="hidden" name="_method" value="put">
+                    <input type="hidden" name="card_id" value="<%= card.card_id%>">
+                    <li>
+                        <button class="acc_ctrl">
+                            <h2>Your Word</h2>
+                        </button>
+                        <div class="acc_panel">
+                            <input type="text" name="term" value="<%= card.term%>">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="acc_ctrl">
+                            <h2>Discribtion</h2>
+                        </button>
+                        <div class="acc_panel">
+                            <textarea name="description" id="" cols="100" rows="5"><%- card.description%></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="acc_ctrl">
+                            <h2>Image URL</h2>
+                        </button>
+                        <div class="acc_panel">
+                            <input type="text" name="image_url" value='<%= card.image_url%>'>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="acc_ctrl">
+                            <h2>Type Your Note </h2>
+                        </button>
+                        <div class="acc_panel">
+                            <input type="text" name="notes" value="<%= card.notes%>">
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        <div class="box"> <button id="ddddd"><span>Uodate</span></button> </div>
+        </form>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="/add.js"></script>
+</body>
+
+</html>
+<!-- 
+            <form action="/dictionary" method="POST">
+            <ul class="acc">
+                <li>
+                    <button class="acc_ctrl">
+                        <h2>Your Word</h2>
+                    </button>
+                    <div class="acc_panel">
+                        <input type="text" name="term" value="<%= card.term%>">
+                    </div>
+                </li>
+                <li>
+                    <button class="acc_ctrl">
+                        <h2>Discribtion</h2>
+                    </button>
+                    <div class="acc_panel">
+                        <textarea name="description" id="" cols="30" rows="10"><%- card.description%></textarea>
+                    </div>
+                </li>
+                <li>
+                    <button class="acc_ctrl">
+                        <h2>Image URL</h2>
+                    </button>
+                    <div class="acc_panel">
+                        <input type="text" name="image_url" value='<%= card.image_url%>'>
+                    </div>
+                </li>
+                <li>
+                    <button class="acc_ctrl">
+                        <h2>Type Your Note </h2>
+                    </button>
+                    <div class="acc_panel">
+                        <input type="text" name="notes" value="<%= card.notes%>">
+                    </div>
+                </li>
+            </ul>
+    </div>
+    <div class="box"> <button id="ddddd"><span>Submit</span></button> </div>
+    </form>
+
+ -->

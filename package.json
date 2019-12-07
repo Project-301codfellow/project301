@@ -1,0 +1,30 @@
+{
+  "name": "project301-backend",
+  "version": "0.0.1",
+  "description": "team members names:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Project-301codfellow/project301-backend.git"
+  },
+  "author": "team03",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Project-301codfellow/project301-backend/issues"
+  },
+  "homepage": "https://github.com/Project-301codfellow/project301-backend#readme",
+  "dependencies": {
+    "@google-cloud/translate": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "pg": "^7.14.0",
+    "superagent": "^4.1.0",
+    "unirest": "^0.6.0"
+  }
+}

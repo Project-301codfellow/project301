@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Amatic+SC|Dancing+Script|Indie+Flower|Lobster|Modak|Pacifico|Patrick+Hand|Righteous|Yellowtail|ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/dictionary.css">
+</head>
+
+<body>
+    <div class="foo">
+        <span class="letter" data-letter="Y">Y</span>
+        <span class="letter" data-letter="o">o</span>
+        <span class="letter" data-letter="u">u</span>
+        <span class="letter" data-letter="r">r</span>
+        <br>
+        <span class="letter" data-letter="D">D</span>
+        <span class="letter" data-letter="i">i</span>
+        <span class="letter" data-letter="c">c</span>
+        <span class="letter" data-letter="t">t</span>
+        <span class="letter" data-letter="i">i</span>
+        <span class="letter" data-letter="o">o</span>
+        <span class="letter" data-letter="n">n</span>
+        <span class="letter" data-letter="a">a</span>
+        <span class="letter" data-letter="r">r</span>
+        <span class="letter" data-letter="y">y</span>
+    </div>
+    <div class="container clearfix">
+        <div class="outer">
+            <div class="box">
+                <div id="sohad">
+                    <section id="mainForm">
+                        <% card.forEach(word => { %>
+                        <h1 class="round green" id="dddd">
+                            <%= word.term%>
+                        </h1>
+                        <p id="pageee">
+                            <%= word.description%>
+                        </p>
+                        <img src="<%- word.image_url%>" alt="not working" id="dsds" width="250px">
+                        <p id='sohadNote'>
+                            <%= word.notes%>
+                        </p>
+                        <form action="<%= `/updateCard/${word.id}` %>" method="post" id="mainForm">
+                            <input type="hidden" name="card_id" value="<%= word.id%>">
+                            <input type="hidden" name="term" value="<%= word.term%>">
+                            <input type="hidden" name="description" value="<%= word.description%>">
+                            <input type="hidden" name="image_url" value="<%= word.image_url%>">
+                            <input type="hidden" name="notes" value="<%= word.notes%>">
+                            <button id="update_btn">Edit</button>
+                        </form>
+                        <form action="<%= `/delete/${word.id}`%>" method="post">
+                            <input type="hidden" value="delete" name="_method">
+                            <button id="f2">DELETE</button>
+                        </form>
+                </div>
+                <% }) %>
+                <form action="/main" method="post">
+                    <button id="f3">NEW</button>
+                </form>
+                </section>
+            </div>
+            <!--END: outer-->
+        </div>
+        <!--END: container-->
+</body>
+
+</html>
